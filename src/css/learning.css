@@ -1,0 +1,698 @@
+.dashboard {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.learning-header {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+.learning-header,.learning-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.learning-nav .left-side {
+    flex-direction: row;
+}
+.learning-nav .left-side img {
+    height: 75px;
+    object-fit: cover;
+}
+
+.learning-nav .right-side {
+    flex-direction: row;
+    gap: 20px;
+    flex-basis: auto;
+}
+
+
+.learning-nav .right-side .header-button-plans {
+    /* background: linear-gradient(to right, #ff0000 0%, #ffff00 50%, #00ff00 100%); */
+    background-color: var(--secondary-color);
+    background-size: 200% 100%;
+    animation-name: change-color; /* name of the animation */
+    animation-duration: 3s; /* duration of the animation */
+    animation-iteration-count: infinite; /* repeat the animation infinitely */
+    animation-direction: alternate; /* alternate between the initial and new colors */
+    color: white;
+    text-transform: capitalize;
+    padding-inline: var(--padding);
+  }
+  
+  @keyframes change-color {
+    0% {
+        background-position: left;
+      }
+      100% {
+        background-position: right;
+      }
+  }
+
+.learning-user-info {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.learning-text-info {
+   text-align: right;
+}
+.learning-user-info .user-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.learning-user-info .user-plans {
+    font-size: 0.9rem;
+    color: var(--description-color);
+}
+
+.learning-user-info .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+/* POPOVER */
+
+.popover-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.popover-content .top-section {
+    padding: var(--padding);
+    padding-bottom: calc(var(--padding) / 2);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.popover-content .top-section .popover-email {
+    color: var(--description-color);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    margin-top: -3px;
+}
+
+.popover-content .top-section .plans-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popover-content .top-section .plans-information  button {
+    background-color: white ;
+    color: black;
+    text-transform:capitalize 
+}
+
+.popover-content .menu {
+    width: 100%;
+    padding: var(--padding);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.popover-content .menu .menu-action {
+    width: 100%;
+}
+
+.popover-content .menu .menu-action .menu-button {
+    background-color: white;
+    color: black;
+    text-transform:capitalize; 
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bottom-section .log-out-container {
+    width: 100%;
+    padding: var(--padding);
+}
+.bottom-section #log-out {
+    background-color: white;
+    color: black;
+    text-transform:capitalize; 
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* PROFILE DIALOG  */
+
+
+.profile-top {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.profile-photo {
+    border-radius: 50%;
+    height: 100%;
+    
+}
+
+.profile-top .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+    position: absolute;
+    top: 10px;
+    right: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-bottom {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom:var(--padding) ;
+    padding-left: calc(2 * var(--padding));
+    padding-right: calc(2 * var(--padding));
+    gap: 25px;
+}
+
+.profile-bottom .email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-container {
+    width: 100%;
+}
+.email-container .label {
+    font-size: 0.9rem;
+    margin-left:5px;
+}
+
+.email-container .email-information {
+    background-color: #f2f3f5;
+    border-radius: var(--border-radius);
+    padding-inline: calc(var(--padding) / 2);
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.email-container .email-information:hover {
+    background-color: #e1e4e7;
+}
+
+.profile-bottom .membership , .profile-bottom .credit {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.profile-bottom .membership p, .profile-bottom .credit p{
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.membership .membership-plan,.credit .credit-button {
+    width: 100%;
+    color: black;
+    text-transform:capitalize;
+    background-color: #f2f3f5;
+}
+
+.profile-bottom .delete-button {
+    color: var(--error-color);
+    width: 100%;
+    font-size: 0.8rem;  
+    text-transform: capitalize;
+    
+}
+
+.profile-bottom-detail {
+    color: var(--description-color);
+    font-size: 0.7rem;
+    display: flex;
+    gap: 10px;
+    opacity: 0.8;
+}
+
+.profile-bottom-detail a:hover {
+    text-decoration: underline;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+/* CATEGORY */
+
+
+.main-learning {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.categories {
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: 20%; */
+    border-right: 1px solid var(--description-color);
+    height: 100%;
+    background-color: #eee;
+    gap: 20px;
+}
+
+.categories .upper-section {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.categories .upper-section h2 {
+    color: var(--description-color);
+    font-weight: 400;
+}
+
+.categories .upper-section .arrow {
+    transform: rotate(180deg);
+    color: black;
+}
+
+.category-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+}
+
+.category-list li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    padding: calc(var(--padding) / 2);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.category-list li:hover {
+    background-color: #ddd;
+}
+
+.category-open {
+    background-color: #ccc;
+}
+.center-item {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-item .fa-solid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/* PLAN GENERATOR */
+
+
+.plan-generator {
+    padding: var(--padding);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 400px;
+    border-right: 1px solid var(--description-color);
+    background-color: #ddd;
+}
+
+.plan-main-description .plan-category-title {
+    font-size: 1.2rem;
+}
+
+.plan-main-description p {
+    color: var(--description-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.needed-information {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.needed-information .main-information,.needed-information .time-period {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.main-information textarea {
+    height: 42px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+}
+
+.main-information span {
+    font-size: 0.8rem;
+    color: var(--description-color);
+}
+
+.time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.time-inputs #time {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+}
+
+.time-inputs .my-select:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.more-info label {
+    font-weight: 500
+}
+.more-info textarea, .more-info div {
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    height: 150px;
+    font-size: 1rem;
+}
+.more-info div {
+    background-color: white;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.more-info div i {
+    color: var(--primary-color);
+    font-size: 3rem;
+    cursor: pointer;
+}
+.more-info span {
+    font-size: 0.9rem;
+    color: var(--error-color);
+}
+.plan-generator .generate-plan-button {
+    background-color: var(--primary-color);
+    font-size: 1.1rem;
+    color: black;
+    text-transform: capitalize;
+}
+
+.plan-generator .generate-plan-button:hover {
+    background-color: var(--button-hover);
+}
+
+.plan-generator .generate-plan-button:active {
+    background-color: var(--button-active);
+}
+
+.plan-generator .inactive-button {
+    background-color: #bbb;
+}
+
+
+.plan-generator .inactive-button:hover,.plan-generator .generate-plan-button:active {
+    background-color: #bbb;
+}
+
+.error {
+    color: var(--error-color);
+    font-size: 0.9rem;
+}
+
+
+.no-category {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.upgrade {
+    align-self: center;
+    width: 75%;
+    margin-top: auto;
+    margin-bottom: 100px;
+    background-color: #ddd;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--padding);
+    text-align: center;
+    height: 200px;
+    gap: 15px;
+}
+
+.upgrade p {
+    font-size: 0.8rem;
+    color: var(--description-color);
+}
+.upgrade i {
+    font-size: 1.2rem;
+}
+.upgrade .upgrade-button {
+    color: var(--description-color);
+    border: 1px solid black;
+    border-radius: calc(var(--border-radius) * 4);
+    padding-inline: var(--padding);
+    text-transform: capitalize;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.plan { 
+    align-self: flex-start;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.plan textarea {
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    top: 300px;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+      width: 250px;
+      height: 250px;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+.plan-header {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid var(--description-color) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-header button {
+    width: 20%;
+    text-transform: capitalize;
+    color: black;
+    background-color: rgb(240,240,240);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.loading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.loading::after {
+    content:"";
+    animation: ellipsis 1s infinite;
+}
+@keyframes ellipsis {
+    0% {
+      content: "";
+    }
+    25% {
+      content: ".";
+    }
+    50% {
+      content: "..";
+    }
+    75% {
+      content: "...";
+    }
+    100% {
+      content: "";
+    }
+  }
+
+
+
+@media screen and (max-width: 999px) {
+    .categories {
+        width: 100%;
+        height: 93vh;
+    }
+    .dashboard {
+        overflow-y:scroll ;
+        height: 100vh;
+    }
+    .plan-generator {
+        width: 100%;
+    }
+    .main-learning {
+        flex-direction: column;
+        overflow-y: auto;
+        height: auto;
+        justify-content: center;
+    }
+
+    .main-information textarea {
+        width: 25%;
+    }
+    .plan-header {
+        border-top: 1px solid var(--description-color);
+        border-right: 1px solid var(--description-color);
+    }
+
+    .plan {
+        gap: 10px;
+        height: 600px;
+    }
+    .plan textarea {
+        margin-bottom: 25px;
+    }
+    .no-category {
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .plan {
+        height: 400px;
+    }
+    .plan-header button {
+        width: 50%;
+    }
+}

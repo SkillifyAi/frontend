@@ -1,0 +1,340 @@
+.pricing-page {
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1320px;
+    padding: var(--padding);
+}
+.pricing-page h1 {
+    width: 100%;
+    font-size: 3rem;
+}
+.pricing-page .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 50px;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;   
+}
+
+
+.pricing-select {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.switch {
+    border-radius: calc(var(--border-radius) * 4);
+    width: 80px;
+    height: 40px;
+    background-color: #aaa;
+    padding: calc(var(--padding) / 4);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.switch-right {
+    justify-content: flex-end;
+}
+.handle {
+    border-radius: 50%;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    /* width: var(--switch-distance); */
+}
+
+.month-inactive,.year-inactive{
+    opacity: 0.7;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.FAQ-page {
+    margin-top: 100px;
+}
+
+.FAQ-pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+}
+
+.FAQ-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.FAQ-title h2 {
+    font-size: 2rem;
+}
+
+.FAQ-title h4 {
+    color: rgba(50,50,50,0.9);
+    font-weight: 400;
+}
+
+.FAQ-title h4 a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.all-questions {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+ 
+}
+
+.question-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--description-color);
+}
+
+.question-container .top-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.question-container .top-part h3 {
+    font-weight: 500;
+    font-size: 1.3rem
+}
+
+.question-container .top-part i {
+    font-size: 1.3rem;
+}
+
+.question-container .answear {
+    margin-bottom: 20px;
+}
+
+.FAQ-pricing span a {
+    transition: color 0.2s ease,text-decoration 0.2s ease;
+}
+
+.FAQ-pricing span a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+.FAQ-page .all-questions .question-container:last-child {
+    margin-bottom: 100px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* PRICING SMALL */
+
+.pricing-small-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-small-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+.small-card {
+    width: 100%;
+    background-color: rgb(240,240,240);
+    padding:calc(var(--padding) / 2);
+    display: flex;
+    gap: 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.small-card:hover {
+    transform: scale(1.05);
+}
+.small-card div > h3 {
+    margin-bottom: 10px;
+}
+.icon {
+    background-color: rgba(146, 3, 255, 0.19);
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+}
+.pricing-small-elements .small-card:nth-child(2) .icon {
+    background-color: rgba(255, 108, 52, 0.19);
+}
+.pricing-small-elements .small-card:nth-child(2) .icon > div {
+    background-color: rgb(255, 108, 52);
+}
+
+.pricing-small-elements .small-card:last-child .icon {
+    background-color: rgba(255, 52, 114, 0.19);
+}
+.pricing-small-elements .small-card:last-child .icon > div {
+    background-color: rgb(255, 52, 114);
+}
+.icon > div {
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: rgb(146, 3, 255);
+    rotate: 45deg;
+    border-radius: calc(var(--border-radius) / 2);
+}
+.price {
+    align-self: center;
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.link-container {
+    width: 100%;
+    background-color: rgb(240,240,240);
+    display: block;
+    margin-top: 15px;
+    border-radius: var(--border-radius);
+    display: flex;
+    padding: calc(var(--padding) / 2);
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.link-container:hover {
+    transform: scale(1.05);
+}
+.cancel-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+.cancel-button-container .cancel-button {
+    position: static;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    background-color: rgb(235,235,235);
+    border-radius: calc(var(--border-radius) / 2);
+    padding-inline: var(--padding);
+    text-transform: capitalize;
+    color: black;
+}
+
+.cancel-button-container .cancel-button:active {
+    background-color: rgb(180,180,180);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.buy-succes {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card {
+    position: relative;
+    width: 320px;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+}
+#upper-side {
+    padding: 2em;
+    background-color: #8BC34A;
+    display: block;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+#upper-side .fa-check {
+    font-size: 2.5rem;
+
+}
+
+#status {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    margin-top: -.2em;
+    margin-bottom: 0;
+  }
+
+  #lower-side {
+    padding: 2em 2em 5em 2em;
+    background: #fff;
+    display: block;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  #message {
+    margin-top: -.5em;
+    color: #757575;
+    letter-spacing: 1px;
+  }
+
+  #contBtn {
+    position: relative;
+    top: 1.5em;
+    text-decoration: none;
+    background: #8bc34a;
+    color: #fff;
+    margin: auto;
+    padding: .8em 3em;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    border-radius: 25px;
+    -webkit-transition: all .4s ease;
+          -moz-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease;
+  }
+  #contBtn:hover {
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+          -moz-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease;
+  }
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 576px) {
+    .pricing-page .pricing-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .FAQ-title h2 {
+        text-align: center;
+    }
+}
+

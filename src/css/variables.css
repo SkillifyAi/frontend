@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* colors */
+    --primary-color: #f78000; /* main color */
+    --secondary-color: #0077be;
+    --accent-color: #E91E63;
+    --background-color: #FFF;
+    --card-background-color:#eee;
+    --text-color: #FFFFFF;
+    --description-color:#808080;
+    --link-color: #f78000;
+    --button-header-hover:#005fa3;
+    --button-header-active:#004d8c;
+    --button-hover:#ff9000;
+    --button-active:#f55b00;
+    --error-color:#c70039;
+    /*  Box shadow*/
+    --card-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+    /* spacing */
+    --padding: 1rem;
+    --margin: 1rem;
+    --border-radius: 0.5rem;
+  
+    /* breakpoints */
+    --mobile: 576px;
+    --tablet: 768px;
+    --desktop: 1000px;
+    --large-desktop: 1200px;
+}
+body {
+    padding: 0 !important;
+    height: 100%;
+    
+}
+html {
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif !important;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    background-color: #ccc;
+}
+
+.App {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,button,textarea {
+    outline: none;
+    border: none;
+    padding: calc(var(--padding) / 2);
+    border-radius: var(--border-radius);
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    font-family: 'Poppins', sans-serif !important;
+}
+@media screen and (max-width: 2400px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1800px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 14px;
+    }
+}

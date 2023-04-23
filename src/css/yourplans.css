@@ -1,0 +1,220 @@
+
+.your-plans {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    height: 92vh;
+    gap: 15px;
+}
+.plans-title {
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+}
+.plans-title .alternative-plans {
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.title-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.plans-title ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.plans-title ul li {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.plans-title ul li:hover {
+    color: var(--primary-color);
+}
+
+.plans-title ul .selected {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.plans-title ul .completed {
+    
+    color: rgb(100,100,100);
+}
+.plan-text {
+    height: 100%;
+    width: 60%;
+    padding: var(--padding);
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+.your-plans .delete-button {
+    background-color: var(--error-color);
+    text-transform: capitalize;
+    color: black;
+}
+.your-plans .delete-button:hover {
+    opacity: 0.7;
+    background-color: var(--error-color);
+}
+
+.plan-text textarea {
+    height: 100%;
+    width: 100%;
+}
+.plan-text textarea:disabled {
+    background-color: rgb(230,230,230);
+}
+.calendar-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: var(--padding);
+    gap: 15px;
+    margin-left: 100px;
+}
+
+.calendar-container p {
+    font-size: 0.9rem;
+    color: var(--description-color);
+}
+.react-calendar button:has(.tile-content) {
+     background-color:   #00C851 !important;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* LEADERBOARD */
+.leaderboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.leaderboard-content .top-side {
+    display: flex;
+    align-items: center;
+    background-color: rgb(230,230,230);
+    padding: calc(var(--padding) / 2);
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+.leaderboard-content .top-side .plans-leaderboard {
+    margin-left: auto;
+}
+
+.leaderboard-users {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.leaderboard-user {
+    display: flex; 
+    align-items: center;
+    gap: 50px;
+}
+.your-user {
+    background-color: rgb(240,240,240);
+    border-radius: var(--border-radius);
+}
+.user-information {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.leaderboard-user .user-information img {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius);
+}
+.leaderboard-user p {
+    width: 20px;
+    text-align: center;
+}
+.leaderboard-user .plan-number {
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.line-of-points {
+    display: flex;
+    align-items: center;
+  }
+  
+  .point {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.9);
+    margin: 0 5px;
+  }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* PLANS COMPLETED */
+
+.plan-completed-top .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  /* RESPONSIVE */
+
+@media screen and (max-width: 999px) {
+    .your-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+    .your-plans:has(.plan-text) {
+        height: fit-content;
+    }
+    .plans-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-right: 0 !important;
+        border-bottom: 0;
+        align-self: flex-start;
+        padding-left: 30px;
+    }
+    .plans-title:has(ul) {
+        border-bottom: 1px solid var(--description-color);
+    }
+
+    .calendar-container {
+        width: 100%;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+    .plan-text {
+        width: 100%;
+        height: 600px;
+    }
+    .calendar-container .react-calendar {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .plan-text {
+        height: 800px;
+    }    
+}

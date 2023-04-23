@@ -1,0 +1,63 @@
+form {
+  background-color: grey;
+}
+form .code-input {
+
+  width: 1em;
+  text-align: center;
+  flex: 1 0 1em;
+}
+.number-code {
+  border: 1px solid rgb(190,190,190);
+  border-radius: calc(var(--border-radius) / 2)
+}
+.number-code {
+
+  display: flex;
+  padding-inline: var(--padding);
+  padding-bottom: calc(var(--padding) / 2);
+  padding-top: calc(var(--padding) / 2);
+  
+}
+
+form .code-input {
+  gap: 10px;
+  display: flex !important;
+  flex-direction: row;
+}
+form .code-input input[type='submit'] {
+  margin-left: auto;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+form .code-input input{
+  padding: 8px;
+  border-radius: 4px;
+  color: black;
+  border: 0;
+  border: 1px solid rgb(200,200,200);
+  font-size: 1rem;
+  height: 40px;
+  width: 15%;
+}
+form .code-input input:invalid {
+  box-shadow: none;
+}
+form .code-input input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+.send-message {
+  align-self: flex-start;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.send-message:hover{
+  color: var(--button-hover);
+}

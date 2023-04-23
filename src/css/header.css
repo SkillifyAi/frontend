@@ -1,0 +1,218 @@
+.header {
+    width: 100%;
+    padding-left: calc(var(--padding) * 1.5);
+    padding-right: calc(var(--padding) * 1.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.right-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap:40px;
+}
+
+.navbar img {
+    object-fit: cover;
+    height: 75px;
+    margin-right: 30px;
+}
+
+.left-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap:40px;
+}
+
+.fa-bars{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-self: flex-end;
+}
+.right-nav li .link {
+    color: white;
+    text-decoration: none;
+    position: relative; /* Add position relative for pseudo-element */
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+.right-nav li .link:hover {
+    color: var(--primary-color);
+}
+.right-nav li .link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Set position below the link text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0); /* Start with a width of 0 */
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+  
+.right-nav li a:hover::before {
+    transform: scaleX(1); /* Scale up the width on hover */
+}
+
+.left-nav .user-icon {
+    background-color: #ddd;
+    padding: calc(var(--padding) / 4);
+    /*padding-left: calc(var(--padding));
+    padding-right: calc(var(--padding)); */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+}
+.left-nav .user-icon:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+    background-color: #eee;
+}
+.left-nav .user-icon i {
+    font-size: 1.2rem;
+}
+
+
+.left-nav .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); 
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+.left-nav .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: var(--button-header-hover); 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+
+.left-nav .css-sghohy-MuiButtonBase-root-MuiButton-root:active {
+    background-color: var(--button-header-active);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+
+.gmail {
+    margin-left: 7px;
+}
+
+.gmail:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Responsive */
+
+
+.hamburger-menu {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    z-index: 75;
+    top: 0;
+    color: #ddd;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-shadow);
+    
+}
+.hamburger-menu .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    background-color: var(--secondary-color);
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+.hamburger-menu .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: var(--button-header-hover); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.hamburger-menu .css-sghohy-MuiButtonBase-root-MuiButton-root:active {
+    background-color: var(--button-header-active);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+
+.hamburger-menu .fa-xmark {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    font-size: 1.5rem;
+    color: var(--description-color);
+    transition: color 0.3s ease,background-color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.hamburger-menu .fa-xmark:hover {
+    color: #ddd;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.hamburger-menu .fa-xmark:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.hamburger-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: #ddd;
+    margin-top: 15px;
+}
+.hamburger-menu ul .text-link {
+    width: 100%;
+    color: #ddd;
+    padding: var(--padding);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.hamburger-menu ul .text-link:last-child {
+    border-bottom: none;
+}
+.hamburger-menu ul .text-link a {
+    color: #ddd;
+}
+@media screen and (max-width: 1000px) {
+   .navbar {
+    justify-content: space-between;
+    position: relative;
+   }
+}   
+
