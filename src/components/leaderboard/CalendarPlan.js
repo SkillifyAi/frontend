@@ -66,7 +66,7 @@ export default function CalendarPlan({appearProps, planData, togglePlanDeleted})
 
   useEffect(() => {
     checkPlanCompletion()
-  },[tileContent])
+  },[tileContent, checkPlanCompletion])
 
   useEffect(() => {
     const getDates = async () => {
@@ -86,7 +86,7 @@ export default function CalendarPlan({appearProps, planData, togglePlanDeleted})
       }
     }
     getDates()
-  },[])
+  },[id])
 
   const tileContentHandler = ({ date, view }) => {
     

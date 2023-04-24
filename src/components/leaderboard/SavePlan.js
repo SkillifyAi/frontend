@@ -11,7 +11,7 @@ export default function SavePlan({open, handleClose, togglePlanSaved, planData, 
     const handleSave = async () => {
         
         try {
-            const resp = await httpClient.patch(`http://localhost:5000/plans/${id}`,{
+            await httpClient.patch(`http://localhost:5000/plans/${id}`,{
                 content: planData.content
             })
             handleClose()

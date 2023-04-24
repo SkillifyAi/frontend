@@ -1,5 +1,4 @@
 import React,{useContext} from 'react'
-import { Button } from '@mui/material'
 import { GetStartedContext } from '../../App'
 export default function Card({data}) {
 
@@ -11,7 +10,7 @@ export default function Card({data}) {
             <h2 className='title'>{title}</h2>
             <p className='description'>{description}</p>
         </div>
-        <img src = {image}/>
+        <img alt = "Some skill" src = {image}/>
         <button className='card-button' onClick={toggleGetStarted}>Get started</button>
     </div>
   )

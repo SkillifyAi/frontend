@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import React from 'react'
 import {animated} from '@react-spring/web'
 
-export default function ({title,appearProps,data,handleSubmit,error,handleChange,inactiveButton,props,width, userData, toggleOpenPricing, placeholder}) {
+export default function PlanGenerator({title,appearProps,data,handleSubmit,error,handleChange,inactiveButton,props,width, userData, toggleOpenPricing, placeholder}) {
 
   return (  
     <animated.div style = {width >= 1000 ? appearProps : props} className='plan-generator'>

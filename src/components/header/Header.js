@@ -1,4 +1,4 @@
-import React,{useState,useRef,useContext, useEffect} from 'react'
+import React,{useState,useRef,useContext} from 'react'
 import {Link} from 'react-router-dom'
 import { Button} from '@mui/material';
 import {useSpring,animated} from '@react-spring/web'
@@ -42,12 +42,12 @@ export default function Header({width, isAuthentificated}) {
     return (
         <header className='header'>
          <nav className={'navbar'}>
-            <Link to = "/"><img src = {logo} /></Link>
+            <Link to = "/"><img alt = "logo" src = {logo} /></Link>
           {width < 1000 && 
             <animated.div ref = {ref} style = {props}  className='hamburger-menu'>
               <ul> 
                 <animated.li ref = {ref} style = {liProps}>
-                  <Link to = "/"><img src = {logo} /></Link>
+                  <Link to = "/"><img alt = "logo" src = {logo} /></Link>
                   <i onClick = {toggleMenu} className="fa-solid fa-xmark"></i>
                 </animated.li>
                 <animated.li ref = {ref} style = {liProps}>

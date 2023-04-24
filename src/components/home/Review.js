@@ -7,7 +7,7 @@ export default function Review({data}) {
   return (
     <div className='review'>
       <div className='review-user-info'>
-        <img src = {image} />
+        <img alt = "Profile"src = {image} />
         <h3>{name}</h3>
       </div>
       <div className='stars'>

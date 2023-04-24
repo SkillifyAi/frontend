@@ -29,16 +29,16 @@ export default function ProfileMenu({anchorEl,handleClose,toggleOpenPricing,widt
         }   
     }
     
-    const handlePortal = async () => {
-        try {
-            const resp = await httpClient.post("http://localhost:5000/stripe/customer-portal", {
-                email: data.email
-            })
-            window.location(resp.data.url)
-        } catch (err) {
-            console.log(err);
-        }
-    }
+    // const handlePortal = async () => {
+    //     try {
+    //         const resp = await httpClient.post("http://localhost:5000/stripe/customer-portal", {
+    //             email: data.email
+    //         })
+    //         window.location(resp.data.url)
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
     return (
         
             <Popover

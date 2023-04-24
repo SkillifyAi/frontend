@@ -28,12 +28,6 @@ function App() {
     const [isAuthentificated,setIsAuthentificated] = useState(false)
     const [width, setWidth] = useState(window.innerWidth);
     const [getStarted,setGetStarted] = useState(false)
-    const [formData,setFormData] = useState({
-      email:"",
-      password:"",
-      name:"",
-      confirmPassword:"",
-    })
 
     const toggleGetStarted = () => {
       setGetStarted(prevState => !prevState);
@@ -81,7 +75,7 @@ function App() {
         <Routes>
           <Route path = "/" element = {<Home width = {width} isAuthentificated = {isAuthentificated}/>} />
           <Route path = '/login' element = {<LoginPage width={width}/>} />
-          <Route path = '/sign-up' element = {<SignUp formData={formData}/>} />
+          <Route path = '/sign-up' element = {<SignUp />} />
           <Route path = "/sign-up/verify-number" element = {<VerifyPhoneNumber />} />
           <Route path= '/dashboard' element = {<Dashboard width = {width} />}/>
           <Route path = '/pricing' element = {<Pricing isAuthentificated = {isAuthentificated}/>}/>

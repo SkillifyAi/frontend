@@ -138,7 +138,7 @@ export default function ResetPassword() {
       }
 
       try {
-        const resp = httpClient.patch(`http://localhost:5000/passwordReset/reset/?token=${params.id}`,{
+        await httpClient.patch(`http://localhost:5000/passwordReset/reset/?token=${params.id}`,{
             password: password
         })
         setTimeout(() => {

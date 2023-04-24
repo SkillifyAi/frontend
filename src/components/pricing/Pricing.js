@@ -53,7 +53,7 @@ export default function Pricing({isAuthentificated}) {
          <div className='FAQ-pricing'>
             <div className='FAQ-title' id = "contact-pricing">
                 <h2>Frequently Asked Questions</h2>
-                <h4>Have questions? Reach via <a target = "_blank"  rel="noreferrer" href = "https://discord.gg/KZeXgW3ZXB">Discord</a> or <a onClick={toggleAnchorEl}>mail</a></h4>
+                <h4>Have questions? Reach via <a target = "_blank"  rel="noreferrer" href = "https://discord.gg/KZeXgW3ZXB">Discord</a> or <p onClick={toggleAnchorEl}>mail</p></h4>
                 <ContactPopover  anchorEl = {anchorEl} containerId={'contact-pricing'} handleClose = {handleClose}/>
             </div>
             <div className='all-questions'>

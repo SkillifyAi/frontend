@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Alert, Avatar, Button, Dialog, IconButton, Snackbar } from '@mui/material'
-import {ContentCopy, Scale} from '@mui/icons-material';
+import {  Avatar, Button, Dialog, IconButton} from '@mui/material'
+import {ContentCopy} from '@mui/icons-material';
 import {Link} from 'react-router-dom'
 import {useSpring,animated} from '@react-spring/web'
 import userBasic from '../../../images/userBasic.jpg'
@@ -54,7 +54,7 @@ export default function ProfileDialog({open,handleClose,width, data}) {
                     border: ' 4px solid #fff',
                     position: 'absolute',
                     bottom: '-50px'
-            }}><img alt = "Profile photo" className = 'profile-photo' src= {data.image ? data.image : userBasic} />
+            }}><img alt = "Profile" className = 'profile-photo' src= {data.image ? data.image : userBasic} />
                 </Avatar>
             <IconButton onClick = {handleClose} >
                 <i className="fa-solid fa-xmark"></i>

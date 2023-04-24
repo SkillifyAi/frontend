@@ -99,7 +99,7 @@ export default function MainLearning ({toggleOpenPricing,width,isCollapsed,toggl
         if(err.response.status === 403)
         {
           setNotEnough(true)
-          if(err.response.data.message != "You already have 3 plans generated.")
+          if(err.response.data.message !== "You already have 3 plans generated.")
             toggleOpenPricing()
           setResponseGenerating(true)
           setAiResponse("")

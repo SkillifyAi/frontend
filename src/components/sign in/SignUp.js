@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {Button, TextField,IconButton, InputAdornment } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import '../../css/login.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {useSpring,animated,} from '@react-spring/web'
 import ClassNames from 'classnames'
 import httpClient from '../../httpClient'
@@ -59,7 +59,6 @@ export default function SignUp() {
         },
       });
       
-      const navigate = useNavigate()
       const verifyPasswordFunction = (name,value) => {
         if(name === 'password') {
             if(/^(?=.*[a-z])/.test(value) === true)
@@ -127,7 +126,7 @@ export default function SignUp() {
         setError("")
 
         const {email, password, confirmPassword, name} = formData
-        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
 
         if(!emailRegex.test(email)) {
@@ -140,7 +139,7 @@ export default function SignUp() {
             setError("Passwords do not match")
         } else {
             try {
-              const resp = await httpClient.post("http://localhost:5000/users/register",{
+               await httpClient.post("http://localhost:5000/users/register",{
                 email:email,
                 password: password,
                 username: name,

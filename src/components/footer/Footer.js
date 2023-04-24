@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <div className='footer'>
-        <img src={logo} />
+        <img alt = "Logo" src={logo} />
         <div className='social-media'>
             <a target='_blank' rel="noreferrer" href='https://www.instagram.com/skillify_ai/'><i className="fa-brands fa-instagram"></i></a>
             <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/skillify-ai-ba371b271/'><i className="fa-brands fa-linkedin"></i></a>

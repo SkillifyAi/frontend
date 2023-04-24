@@ -14,7 +14,7 @@ export default function YourPlans({width}) {
 
 
   const [planDataCopy, setPlanDataCopy] = useState(null)
-  const [planSaved, setPlanSaved] = useState(false)
+
   const [confirmSave, setConfirmSave] = useState(false)
   const [alternativePlans, setAlternativePlans] = useState(false)
   const [planDeleted, setPlanDeleted] = useState(false)
@@ -46,8 +46,6 @@ export default function YourPlans({width}) {
   const togglePlanDeleted = () => setPlanDeleted(prevState => !prevState)
 
   const toggleConfirmSave = () => setConfirmSave(prevState => !prevState)
-
-  const togglePlanSaved = () => setPlanSaved(prevState => !prevState)
 
   const navigate = useNavigate()
 

@@ -1,6 +1,5 @@
 import React,{useState,useEffect,useRef} from 'react'
 import {useSpring,animated} from '@react-spring/web'
-import { useInView } from 'react-intersection-observer';
 
 
 function Number({ n }) {
@@ -21,10 +20,10 @@ function Number({ n }) {
     );
 
     observer.observe(ref.current);
-
+      const current = ref.current
     return () => {
-      if (observer.current && ref.current) {
-        observer.unobserve(ref.current);
+      if (observer.current && current) {
+        observer.unobserve(current);
       }
     };
   }, []);

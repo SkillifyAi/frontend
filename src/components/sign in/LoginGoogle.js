@@ -37,7 +37,7 @@ export default function LoginGoogle ({handleClose}) {
         }
         getData()
     
-    },[user, navigate]);
+    },[user, navigate, handleClose]);
 
 
     const login = useGoogleLogin({

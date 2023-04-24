@@ -1,5 +1,5 @@
-import React,{useState,useEffect,useRef} from 'react'
-import {useSpring,animated} from '@react-spring/web'
+import React from 'react'
+
 
 import {cardsData} from './data'
 import Card from './Card'

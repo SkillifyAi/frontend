@@ -11,7 +11,7 @@ export default function PlanCompleted({open, handleClose, togglePlanDeleted}) {
     const handleDelete = async () => {
        
         try {
-            const resp = await httpClient.delete(`http://localhost:5000/plans/${id}`)
+             await httpClient.delete(`http://localhost:5000/plans/${id}`)
             togglePlanDeleted()
             handleClose()
             window.location.reload()
@@ -24,13 +24,13 @@ export default function PlanCompleted({open, handleClose, togglePlanDeleted}) {
         const planCompleted = async () => {
             try {
             
-                const resp = await httpClient.get(`http://localhost:5000/plans/completed/${id}`)
+                 await httpClient.get(`http://localhost:5000/plans/completed/${id}`)
             } catch (err) {
                 console.log(err)
             }
         }
         planCompleted()
-    },[])
+    },[id])
   return (
     <Dialog
         open = {open}

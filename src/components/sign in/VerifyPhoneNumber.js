@@ -10,7 +10,6 @@ import PhoneInput from 'react-phone-number-input';
 
 export default function VerifyPhoneNumber({userData}) {
 
-    const [prefix, setPrefix] = useState("")
     const [code, setCode] = useState("")
     const [succes, setSucces] = useState(false)
     const [sendMessage, setSendMessage] = useState(false)
@@ -46,7 +45,7 @@ export default function VerifyPhoneNumber({userData}) {
         }
         
         try {
-          const resp = await httpClient.post("http://localhost:5000/users/send-message", {
+          await httpClient.post("http://localhost:5000/users/send-message", {
             phoneNumber: phoneNumber
           })
           setSucces("Message sent successfully")
