@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'skillify-ai'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_98A0684569D14A9AAA21FA180A27F2A7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9BB3EFDFC3014FC09D81C8A2EAC0D6B5 }}
           package: .
