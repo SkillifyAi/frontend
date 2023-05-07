@@ -29,16 +29,17 @@ export default function ProfileMenu({anchorEl,handleClose,toggleOpenPricing,widt
         }   
     }
     
-    // const handlePortal = async () => {
-    //     try {
-    //         const resp = await httpClient.post("http://localhost:5000/stripe/customer-portal", {
-    //             email: data.email
-    //         })
-    //         window.location(resp.data.url)
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
+    const handlePortal = async () => {
+        try {
+            const resp = await httpClient.post("http://localhost:5000/stripe/customer-portal", {
+                email: data.email
+            })
+
+            window.location = resp.data.url
+        } catch (err) {
+            console.log(err);
+        }
+    }
     return (
         
             <Popover
@@ -82,7 +83,7 @@ export default function ProfileMenu({anchorEl,handleClose,toggleOpenPricing,widt
                                     <Button className = "menu-button"  onClick={toggleAnchorElContact}>Contact us</Button>
                                     <ContactPopover anchorEl = {anchorElContact} containerId={'contact-profile'} handleClose = {handleCloseContact} />
                                 </li>
-                                {/* <li onClick = {handlePortal} className='menu-action'><Button className='menu-button'>Configure payment plan</Button></li> */}
+                                <li onClick = {handlePortal} className='menu-action'><Button className='menu-button'>Configure payment plan</Button></li>
                                 <li className='menu-action'><Link to = "/faq"><Button className = "menu-button" >FAQ</Button></Link></li>
                             </ul>
                             <div className='log-out-container'>

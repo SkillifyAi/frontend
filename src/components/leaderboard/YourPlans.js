@@ -141,7 +141,6 @@ export default function YourPlans({width}) {
       <SavePlan
         open = {confirmSave}
         handleClose = {toggleConfirmSave} 
-        togglePlanSaved={togglePlanSaved}
         planData = {planData}
         changeData = {changeData}
       />

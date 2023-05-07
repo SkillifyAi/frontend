@@ -45,7 +45,7 @@ export default function PlanGenerator({title,appearProps,data,handleSubmit,error
                     >
                     <MenuItem value="days">Days</MenuItem>
                     <MenuItem value="weeks">Weeks</MenuItem>
-                    <MenuItem value="months">Months</MenuItem>
+                    <MenuItem value="months">Month</MenuItem>
                     </Select>
                 </div>
             </div>

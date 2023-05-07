@@ -1,7 +1,7 @@
 import React,{useState,useEffect,createContext} from 'react';
 import Header from './components/header/Header'
 import './css/variables.css'
-import { Route, Routes,useLocation} from 'react-router-dom';
+import { Route, Routes, useLocation} from 'react-router-dom';
 
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
@@ -34,7 +34,7 @@ function App() {
     };
 
     const location = useLocation()
-
+    
     useEffect(() => {
       const checkAuthentification = async () => {
         try {
@@ -43,11 +43,12 @@ function App() {
           setIsAuthentificated(resp.data.token)
         }
         catch (err) {
+          console.log(err);
           setIsAuthentificated(false)
         }
       }
       checkAuthentification()
-    },[])
+    },[location])
 
     useEffect(() => {
       const handleResize = () => {

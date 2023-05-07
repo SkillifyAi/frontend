@@ -23,13 +23,14 @@ export default function PlanCompleted({open, handleClose, togglePlanDeleted}) {
     useEffect(() => {
         const planCompleted = async () => {
             try {
-            
                  await httpClient.get(`http://localhost:5000/plans/completed/${id}`)
             } catch (err) {
                 console.log(err)
             }
+            console.log("test"); 
         }
-        planCompleted()
+        if(open === true)
+            planCompleted()
     },[id])
   return (
     <Dialog

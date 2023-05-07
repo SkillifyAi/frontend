@@ -6,7 +6,6 @@ import PlanGenerator from './PlanGenerator'
 import NoCategoryComponent from './NoCategoryComponent'
 import Plan from './Plan'
 import httpClient from '../../../httpClient'
-import {response } from './AiResponseExample'
 import Succes from '../Succes'
 
 export default function MainLearning ({toggleOpenPricing,width,isCollapsed,toggleIsCollapsed, userData}) {
@@ -31,7 +30,7 @@ export default function MainLearning ({toggleOpenPricing,width,isCollapsed,toggl
     else:false
   })
   const [inactiveButton,setInactiveButton] = useState(false)
-  const [aiResponse,setAiResponse] = useState(response)
+  const [aiResponse,setAiResponse] = useState()
   const [errorText, setErrorText] = useState("")
   const handleChange = (event) => {
     const {name,value} = event.target
@@ -62,9 +61,9 @@ export default function MainLearning ({toggleOpenPricing,width,isCollapsed,toggl
     if(/^[0-9]+$/.test(data.timeLength) === false) {
         setError("Time duration should contain letters only")
         return false
-    } else if((data.timeType === 'months' && data.timeLength > 2) || 
-    (data.timeType === 'weeks' && data.timeLength > 8) ||
-    (data.timeType === "days" && data.timeLength > 60)) { 
+    } else if((data.timeType === 'months' && data.timeLength > 1) || 
+    (data.timeType === 'weeks' && data.timeLength > 4) ||
+    (data.timeType === "days" && data.timeLength > 30)) { 
       setError("Maximum time is 2 months")
       return false
     }

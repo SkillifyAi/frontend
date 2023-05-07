@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {useGoogleLogin } from '@react-oauth/google';
 import GoogleLogo from '../../images/GoogleLogo.png'
 import httpClient from '../../httpClient';
@@ -8,6 +8,7 @@ export default function LoginGoogle ({handleClose}) {
  
     const [user, setUser] = useState()
     const [error, setError] = useState()
+    const hasMounted = useRef(false);
 
     const navigate = useNavigate()
 
@@ -25,6 +26,7 @@ export default function LoginGoogle ({handleClose}) {
                         email: email,
                         picture: picture
                     })
+
                     console.log(resp.data);
                     navigate('/dashboard')
                     handleClose()
@@ -35,8 +37,12 @@ export default function LoginGoogle ({handleClose}) {
               
             }
         }
-        getData()
-    
+
+        if (user && !hasMounted.current) {
+            getData()
+            hasMounted.current = true;
+        }
+
     },[user, navigate, handleClose]);
 
 

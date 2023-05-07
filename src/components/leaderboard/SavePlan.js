@@ -3,7 +3,7 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, Button } from '@mui/
 import httpClient from '../../httpClient'
 import { useParams } from 'react-router-dom'
 
-export default function SavePlan({open, handleClose, togglePlanSaved, planData, changeData}) {
+export default function SavePlan({open, handleClose, planData, changeData}) {
 
     const {id} = useParams()
 
@@ -15,7 +15,6 @@ export default function SavePlan({open, handleClose, togglePlanSaved, planData, 
                 content: planData.content
             })
             handleClose()
-            togglePlanSaved()
         } catch (err) {
             if(err.response.status === 403)
                 setError(err.response.data.error)
